@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <b>Hãy thử đoán xem!</b>
+</p>
+<button id="button" onclick="letGuess()">PlayGame</button>
+<p id="guess"></p>
+<script>
+    function letGuess()
+    {
+        alert("Insert a range of number that you want to guess!");
+        var minNum = parseInt(prompt("Insert minNum of range"));
+        var maxNum = parseInt(prompt("Insert maxNum of range"));
+        var ranNum = parseInt(Math.random() * (maxNum - minNum) + minNum);
+
+        for (let count = 1; count <= 3; count++)
+        {
+            var guessNum = parseInt(prompt(" Please Guess a number that is inside that range"));
+
+
+            if (guessNum == ranNum) {
+                alert("You are so lucky Guy");
+                break;
+            }
+            else alert("Let try one more time Bae!");
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var count = 1;
+    var firstNo = 0 ;
+    var secondNo =1;
+    var total =1 ;
+    document.write(firstNo +" "+ count + '<br/>');
+    document.write(secondNo +" "+ ++count + '<br/>');
+    while (count <= 19 ){
+        count ++;
+        var thirdNo = secondNo + firstNo;
+        total = total + thirdNo;
+        document.write(thirdNo + " "  + '<br/>' );
+        firstNo = secondNo;
+        secondNo= thirdNo;
+    }
+    document.write("Total of 10 first number on fibonacci is : " + total);
+</script>
+</body>
+</html>
